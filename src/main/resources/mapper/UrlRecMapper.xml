@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 指定dao -->
+<mapper namespace="com.yan.gm.app.mapper.UrlRecMapper">
+
+	<insert id="insertUrlRec" parameterType="com.yan.gm.app.schema.UrlRec">
+    	insert into url_rec 
+    	(tid, host, rurl, title, validStatus, insertTime, updateTime) 
+    	values 
+    	(#{tid}, #{host}, #{rurl}, #{title}, #{validStatus}, #{insertTime}, #{updateTime})
+    </insert>
+ 
+    <select id="findUrlRecsByTitle" parameterType="String" resultType="com.yan.gm.app.schema.UrlRec">
+        SELECT * FROM url_rec 
+        	WHERE title = #{title} 
+        		and validStatus = '1' 
+        	order by updateTime desc
+    </select>
+    
+    <select id="findUrlRecByTID" parameterType="String" resultType="com.yan.gm.app.schema.UrlRec">
+        SELECT * FROM url_rec 
+        	WHERE tid = #{tid} 
+        		and validStatus = '1' 
+        	order by updateTime desc 
+        	limit 1
+    </select>
+    
+</mapper>

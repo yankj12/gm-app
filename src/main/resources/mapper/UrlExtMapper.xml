@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 指定dao -->
+<mapper namespace="com.yan.gm.app.mapper.UrlExtMapper">
+
+	<insert id="insertUrlExt" parameterType="com.yan.gm.app.schema.UrlExt">
+    	insert into url_ext
+    	(tid, host, category, validStatus, insertTime, updateTime) 
+    	values 
+    	(#{tid}, #{host}, #{category}, #{validStatus}, #{insertTime}, #{updateTime})
+    </insert>
+    
+    <select id="findUrlExtByTID" parameterType="String" resultType="com.yan.gm.app.schema.UrlExt">
+        SELECT * FROM url_ext
+        	WHERE tid = #{tid} 
+        		and validStatus = '1' 
+        	order by updateTime desc 
+        	limit 1
+    </select>
+    
+</mapper>
