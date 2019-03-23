@@ -5,9 +5,9 @@
 
 	<insert id="insertUrlExt" parameterType="com.yan.gm.app.schema.UrlExt">
     	insert into url_ext
-    	(tid, host, category, validStatus, insertTime, updateTime) 
+    	(tid, host, category, ext1, ext2, ext3, validStatus, insertTime, updateTime) 
     	values 
-    	(#{tid}, #{host}, #{category}, #{validStatus}, #{insertTime}, #{updateTime})
+    	(#{tid}, #{host}, #{category}, #{ext1}, #{ext2}, #{ext3}, #{validStatus}, #{insertTime}, #{updateTime})
     </insert>
     
     <select id="findUrlExtByTID" parameterType="String" resultType="com.yan.gm.app.schema.UrlExt">

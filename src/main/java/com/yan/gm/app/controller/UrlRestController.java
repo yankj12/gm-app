@@ -32,7 +32,7 @@ public class UrlRestController {
 		
 	@RequestMapping("/saveurl")
 	@ResponseBody
-	public ResponseVo saveUrl(String tid, String host, String rurl, String title, String category) {
+	public ResponseVo saveUrl(String tid, String host, String rurl, String title, String category, String ext1, String ext2, String ext3) {
 		ResponseVo responseVo = new ResponseVo();
 		
 		// 先根据tid判断下是否存在
@@ -56,6 +56,9 @@ public class UrlRestController {
 			urlExt.setTid(tid);
 			urlExt.setHost(host);
 			urlExt.setCategory(category);
+			urlExt.setExt1(ext1);
+			urlExt.setExt2(ext2);
+			urlExt.setExt3(ext3);
 			
 			urlExt.setValidStatus("1");
 			urlExt.setInsertTime(new Date());

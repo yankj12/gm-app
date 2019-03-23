@@ -25,6 +25,9 @@ CREATE TABLE
         tid VARCHAR(60) DEFAULT '',
         host VARCHAR(140) DEFAULT '',
         category VARCHAR(60) DEFAULT '',
+        ext1 VARCHAR(255) DEFAULT '',
+        ext2 VARCHAR(255) DEFAULT '',
+        ext3 VARCHAR(255) DEFAULT '',
 		validStatus VARCHAR(2) DEFAULT '1',
         insertTime DATETIME,
         updateTime DATETIME,
@@ -33,4 +36,8 @@ CREATE TABLE
     ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE INDEX idx_url_ext_tid ON url_ext (tid);
+
+alter table url_ext add ext3 VARCHAR(255) DEFAULT '' after category;
+alter table url_ext add ext2 VARCHAR(255) DEFAULT '' after category;
+alter table url_ext add ext1 VARCHAR(255) DEFAULT '' after category;
 

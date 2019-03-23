@@ -23,6 +23,9 @@ public class VoTranslateUtl {
 		urlExt.setTid(urlVo.getTid());
 		urlExt.setHost(urlVo.getHost());
 		urlExt.setCategory(urlVo.getCategory());
+		urlExt.setExt1(urlVo.getExt1());
+		urlExt.setExt2(urlVo.getExt2());
+		urlExt.setExt3(urlVo.getExt3());
 		
 		return urlExt;
 	}
@@ -39,6 +42,9 @@ public class VoTranslateUtl {
 		
 		if(urlExt != null) {
 			urlVo.setCategory(urlExt.getCategory());
+			urlVo.setExt1(urlExt.getExt1());
+			urlVo.setExt2(urlExt.getExt2());
+			urlVo.setExt3(urlExt.getExt3());
 		}
 		return urlVo;
 	}
