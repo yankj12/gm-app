@@ -4,7 +4,7 @@
 
   <groupId>com.yan</groupId>
   <artifactId>gm-app</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-RELEASE</version>
   <packaging>jar</packaging>
 
   <name>gm-app</name>
@@ -20,35 +20,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<!-- <version>2.1.0.RELEASE</version> -->
 		<version>1.5.9.RELEASE</version> 
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
   <dependencies>
-
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-data-mongodb</artifactId>
-	</dependency>
 
 	<!-- 实现web功能依赖 --> 
 	<dependency> 
 		<groupId>org.springframework.boot</groupId> 
 		<artifactId>spring-boot-starter-web</artifactId> 
 	</dependency> 
-	
-	<!--  使用Thymeleaf视图构建MVC Web应用程序的入门者 -->
-	<dependency>
-		<groupId>org.springframework.boot</groupId> 
-		<artifactId>spring-boot-starter-thymeleaf</artifactId> 
-	</dependency>
-	<dependency>
-    	<groupId>net.sourceforge.nekohtml</groupId>
-    	<artifactId>nekohtml</artifactId>
-    	<version>1.9.22</version>
-	</dependency>
-	
+
 	<dependency>
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter</artifactId>
@@ -112,8 +94,6 @@
 						<manifest>
 							<!--程序入口-->
 							<mainClass>com.yan.gm.app.GMApplication</mainClass>
-							<!-- <addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix> -->
 						</manifest>
 						<manifestEntries>
 							<Class-Path>./</Class-Path>
